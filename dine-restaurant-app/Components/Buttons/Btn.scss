@@ -1,0 +1,18 @@
+@import "../dine-restaurant-app/src/index.scss";
+.btn__container {
+  .btn__book {
+    width: 10.5rem;
+    height: 2.7rem;
+    font-size: 12px;
+    color: #ffffff;
+    border: 1px solid #ffff;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem; 
+    letter-spacing: 0.15625rem;
+    font-family: $leagueSpartanFont;
+    cursor: pointer;
+    background-color: black;
+    transition: background-color 0.5s ease, opacity 0.5s ease;
+  }
+}

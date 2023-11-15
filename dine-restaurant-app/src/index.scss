@@ -1,31 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap");
+
+//Primary
+$backgroundColor: #fff;
+$textColorWhite: #fff;
+$beaver: #9e7f66;
+$codGray: #111;
+//Secondary
+$mirage: #17192b;
+$ebonyClay: #242b37;
+$shuttleGray: #5c6779;
+
+//Typography
+$leagueSpartanFont: "League Spartan", sans-serif;
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  background-color: $backgroundColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  box-sizing: border-box;
 }
-
+* {
+  margin: 0 auto;
+}
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 322px;
-  min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-family: $leagueSpartanFont;
 }
-
-
-
+h2 {
+  font-family: $leagueSpartanFont;
+}
+p {
+  font-family: $leagueSpartanFont;
+}
+img {
+  max-width: 100%;
+}
