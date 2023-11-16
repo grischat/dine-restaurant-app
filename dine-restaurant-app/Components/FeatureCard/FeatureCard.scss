@@ -1,0 +1,31 @@
+.container__card {
+  display: flex;
+  flex-direction: column;
+
+  .card__img {
+    position: relative;
+    margin: 1.5rem;
+    height: auto;
+    box-shadow: 0px 68px 63px -76px rgba(66, 68, 90, 1);
+  }
+  .card__header {
+    text-align: center;
+    position: relative;
+    width: 12rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    top: 3rem;
+  }
+  .card__paragraph {
+    top: 4rem;
+    position: relative;
+    width: 20rem;
+    color: #242b37;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem;
+  }
+}

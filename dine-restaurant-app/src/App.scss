@@ -1,9 +1,14 @@
 .container {
-  width: 23.4375rem; 
-  
-}
-.container__bgimage {
-  position: absolute;
-  opacity: 0.95;
-  bottom: -1.9rem;
+  width: 23.4375rem;
+  .container__bgimg {
+    position: absolute;
+    opacity: 0.95;
+    bottom: -1.9rem;
+    z-index: -1;
+  }
+  .cards__container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
 }

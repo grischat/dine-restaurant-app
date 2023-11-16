@@ -8,11 +8,16 @@
     border: 1px solid #ffff;
     font-style: normal;
     font-weight: 400;
-    line-height: 1rem; 
+    line-height: 1rem;
     letter-spacing: 0.15625rem;
     font-family: $leagueSpartanFont;
     cursor: pointer;
     background-color: black;
-    transition: background-color 0.5s ease, opacity 0.5s ease;
+    transition: background-color 0.5s ease;
+  }
+  .btn__book:hover {
+    background-color: #ffffff;
+    color: #000000; 
+    border: 1px solid #000000;
   }
 }
