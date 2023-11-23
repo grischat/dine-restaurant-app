@@ -1,8 +1,6 @@
-import '../Divider/Divider.scss'
+import "../Divider/Divider.scss";
 
-const Divider = () => {
-    return (
-        <div className="divider"></div>
-    )
-}
-export default Divider
+const Divider = ({ className = "divider" }) => {
+  return <div className={className}></div>;
+};
+export default Divider;

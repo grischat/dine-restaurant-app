@@ -1,0 +1,29 @@
+@import "../dine-restaurant-app/src/index.scss";
+.highlights__container {
+  background-color: $codGray;
+  position: relative;
+  top: 4rem;
+  width: 23.4375rem;
+  height: 20rem;
+  .highlights__header {
+    text-align: center;
+    position: relative;
+    width: 15rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    top: 7.5rem;
+    color: #fff;
+  }
+  .highlights__paragraph {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem;
+    position: relative;
+    width: 21rem;
+    top: 10rem;
+  }
+}

@@ -1,6 +1,7 @@
 import "./App.scss";
 import HeaderBooking from "../Components/HeaderBooking/HeaderBooking";
 import FeatureCard from "../Components/FeatureCard/FeatureCard";
+import HighlightsCard from "../Components/HighlightsCard/HighlightsCard";
 function App() {
   return (
     <>
@@ -22,6 +23,8 @@ function App() {
             paragraph={`All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food.`}
             src={"../images/homepage/locally-sourced-mobile.jpg"}
           />
+          
+        <HighlightsCard/>
         </div>
       </div>
     </>
