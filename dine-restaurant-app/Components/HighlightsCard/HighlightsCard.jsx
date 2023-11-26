@@ -1,6 +1,6 @@
 import Divider from "../Divider/Divider";
 import "../HighlightsCard/HighlightsCard.scss";
-
+import HighlightsDish from "./HighlightsDish/HighlightsDish";
 const HighlightsCard = () => {
   return (
     <div className="highlights__container">
@@ -10,6 +10,24 @@ const HighlightsCard = () => {
         We cater for all dietary requirements, but here’s a glimpse at some of
         our diner’s favourites. Our menu is revamped every season.
       </p>
+      <div className="highlightsmenu__container">
+        <HighlightsDish
+          img="../images/homepage/salmon-mobile.jpg"
+          header="Seared Salmon Fillet"
+          description="Our locally sourced salmon served with a refreshing buckwheat summer salad."
+        />
+        <HighlightsDish
+          img="../images/homepage/beef-mobile.jpg"
+          header="Rosemary Filet Mignon"
+          description="Our prime beef served to your taste with a delicious choice of seasonal sides."
+        />
+        <HighlightsDish
+          img="../images/homepage/chocolate-mobile.jpg"
+          header="Summer Fruit Chocolate Mousse"
+          description="Creamy mousse combined with summer fruits and dark chocolate shavings."
+          underscoreLine={false}
+        />
+      </div>
     </div>
   );
 };

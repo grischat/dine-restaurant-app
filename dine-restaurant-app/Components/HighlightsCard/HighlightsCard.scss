@@ -4,7 +4,7 @@
   position: relative;
   top: 4rem;
   width: 23.4375rem;
-  height: 20rem;
+  height: 110rem;
   .highlights__header {
     text-align: center;
     position: relative;
@@ -25,5 +25,12 @@
     position: relative;
     width: 21rem;
     top: 10rem;
+  }
+  .highlightsmenu__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 13rem;
+    gap: 5rem;
   }
 }

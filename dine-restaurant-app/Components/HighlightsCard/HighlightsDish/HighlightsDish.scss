@@ -1,0 +1,25 @@
+.dish__container {
+  margin: 1.5rem;
+
+  .dish__header {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 2rem;
+  }
+  .dish__description {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 4rem;
+    width: 16.4375rem;
+    line-height: 1.625rem;
+  }
+  .underscore {
+    width: 20.4375rem;
+    border: 1px solid #fff;
+    opacity: 0.1494;
+    position: relative;
+    top: 7rem;
+  }
+}
