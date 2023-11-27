@@ -1,7 +1,45 @@
 .events__list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
+  .event__name {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    color: #4c4c4c;
+    cursor: pointer;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.75rem;
+    letter-spacing: 0.15625rem;
+  }
+  .event__name:hover {
+    opacity: 1;
+  }
+  .event__name-selected {
+    opacity: 1;
+    color: #4c4c4c;
+    cursor: pointer;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.75rem;
+    letter-spacing: 0.15625rem;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      margin-top: 2rem;
+      left: 50%;
+      width: 3rem;
+      border: 2px solid #9e7f66;
+      transform: translateX(-50%);
+    }
+  }
   .events__description {
     width: 20.4375rem;
     color: #242b37;
@@ -10,6 +48,6 @@
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.625rem; /* 162.5% */
+    line-height: 1.625rem;
   }
 }

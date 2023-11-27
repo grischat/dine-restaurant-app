@@ -1,0 +1,40 @@
+.footer__container {
+  width: 23.4375rem;
+  height: 27.5rem;
+  background: #111;
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 4rem;
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    .footer__header {
+      width: 6.46406rem;
+      height: 2.5rem;
+      color: #fff;
+    }
+    .footer__address {
+      color: #fff;
+      text-align: center;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 100;
+      line-height: 1.75rem;
+      letter-spacing: 0.125rem;
+      text-transform: uppercase;
+    }
+    .footer__opentimes {
+      color: #fff;
+      text-align: center;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 100;
+      line-height: 1.75rem;
+      letter-spacing: 0.125rem;
+      text-transform: uppercase;
+    }
+  }
+}

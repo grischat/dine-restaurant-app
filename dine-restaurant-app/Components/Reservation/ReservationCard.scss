@@ -1,0 +1,30 @@
+.reservation__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .reservation__img {
+    position: absolute;
+    z-index: -1;
+    margin-top: 10rem;
+  }
+  .reservation__header {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem; /* 125% */
+    letter-spacing: -0.025rem;
+  }
+  .innerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 5rem;
+    gap: 2rem;
+  }
+}

@@ -3,6 +3,8 @@ import HeaderBooking from "../Components/HeaderBooking/HeaderBooking";
 import FeatureCard from "../Components/FeatureCard/FeatureCard";
 import HighlightsCard from "../Components/HighlightsCard/HighlightsCard";
 import DineEvents from "../Components/DineEvents/DineEvents";
+import ReservationCard from "../Components/Reservation/ReservationCard";
+import Footer from "../Components/Footer/Footer";
 function App() {
   return (
     <>
@@ -24,8 +26,13 @@ function App() {
             paragraph={`All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food.`}
             src={"../images/homepage/locally-sourced-mobile.jpg"}
           />
-        <HighlightsCard/>
-        <DineEvents/>
+          <HighlightsCard />
+          <DineEvents />
+          <ReservationCard
+            header={"Ready to make a reservation?"}
+            btnText={"BOOK A TABLE"}
+          />
+          <Footer/>
         </div>
       </div>
     </>
