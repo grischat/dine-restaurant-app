@@ -1,6 +1,7 @@
 import "./EventCard.scss";
 import eventsData from "./Events.json";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Btn from "../../Buttons/Btn";
 const EventCard = () => {
   const initialEventId = eventsData[0].id;
@@ -10,7 +11,6 @@ const EventCard = () => {
   const selectedEvent = eventsData.find(
     (event) => event.id === selectedEventId
   );
-  
 
   return (
     <div className="events__list">
@@ -18,7 +18,11 @@ const EventCard = () => {
       {eventsData.map((event) => (
         <span
           key={event.id}
-          className={selectedEventId === event.id ? "event__name-selected" : "event__name"}
+          className={
+            selectedEventId === event.id
+              ? "event__name-selected"
+              : "event__name"
+          }
           onClick={() => handleEventClick(event.id)}
         >
           {event.header}
@@ -30,7 +34,9 @@ const EventCard = () => {
           <p className="events__description">{selectedEvent.description}</p>
         </>
       )}
-      <Btn>BOOK A TABLE</Btn>
+      <Link to="/booking">
+        <Btn>BOOK A TABLE</Btn>
+      </Link>
     </div>
   );
 };

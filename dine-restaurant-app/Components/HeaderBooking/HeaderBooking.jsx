@@ -1,5 +1,6 @@
 import "./HeaderBooking.scss";
 import Btn from "../Buttons/Btn";
+import { Link } from "react-router-dom";
 const HeaderBooking = () => {
   return (
     <div className="header__container">
@@ -13,7 +14,9 @@ const HeaderBooking = () => {
         Experience our seasonal menu in beautiful country surroundings. Eat the
         freshest produce from the comfort of our farmhouse.
       </p>
-      <Btn>BOOK A TABLE</Btn>
+      <Link to="/booking">
+        <Btn>BOOK A TABLE</Btn>
+      </Link>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import Btn from "../Buttons/Btn";
+import { Link } from "react-router-dom";
 import "./ReservationCard.scss";
 const ReservationCard = ({ header, subheader, paragraph, btnText }) => {
   return (
@@ -17,7 +18,9 @@ const ReservationCard = ({ header, subheader, paragraph, btnText }) => {
             the freshest produce from the comfort of our farmhouse.
           </p>
         )}
-        <Btn className="btn__book-transparent">{btnText}</Btn>
+        <Link to="/booking">
+          <Btn className="btn__book-transparent">{btnText}</Btn>
+        </Link>
       </div>
     </div>
   );

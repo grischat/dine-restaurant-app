@@ -32,7 +32,7 @@ function App() {
             header={"Ready to make a reservation?"}
             btnText={"BOOK A TABLE"}
           />
-          <Footer/>
+          <Footer />
         </div>
       </div>
     </>
