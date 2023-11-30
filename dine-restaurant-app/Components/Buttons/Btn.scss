@@ -17,18 +17,19 @@
   }
   .btn__book:hover {
     background-color: #ffffff;
-    color: #000000; 
+    color: #000000;
     border: 1px solid #000000;
   }
   //transparent btn
   .btn__book-transparent {
-    width: 10.5rem;
-    height: 2.7rem;
-    font-size: 12px;
+    width: 15.3125rem;
+    height: 4rem;
+    font-size: 1.0625rem;
     color: #ffffff;
     border: 1px solid white;
     font-style: normal;
     font-weight: 600;
+    line-height: 1rem;
     letter-spacing: 0.15625rem;
     font-family: "League Spartan", sans-serif;
     cursor: pointer;
@@ -37,9 +38,7 @@
   }
   .btn__book-transparent:hover {
     background-color: #ffffff;
-    color: #000000; 
+    color: #000000;
     border: 1px solid #000000;
   }
 }
-
-  

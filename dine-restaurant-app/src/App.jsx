@@ -31,6 +31,7 @@ function App() {
           <ReservationCard
             header={"Ready to make a reservation?"}
             btnText={"BOOK A TABLE"}
+            img={"../images/homepage/ready-bg-mobile.jpg"}
           />
           <Footer />
         </div>
