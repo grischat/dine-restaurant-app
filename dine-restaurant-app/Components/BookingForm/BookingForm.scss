@@ -1,0 +1,22 @@
+.form__container {
+  width: 20.4375rem;
+  height: 36.5625rem;
+  background: #fff;
+  position: relative;
+  top: 10rem;
+  box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+  #standard-basic {
+    width: 17rem;
+  }
+  #form__text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 2rem;
+    gap: 2rem;
+  }
+  .MuiFormLabel-root{
+    left: 3rem;
+    top: -0.8rem;
+  }
+}

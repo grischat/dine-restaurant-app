@@ -1,4 +1,5 @@
 import ReservationCard from "../Components/Reservation/ReservationCard";
+import BookingForm from "../Components/BookingForm/BookingForm";
 import './Booking.scss'
 const Booking = () => {
   return (
@@ -10,6 +11,7 @@ const Booking = () => {
         btnText={`RESERVE PLACE`}
         img={'../images/booking/hero-bg-mobile.jpg'}
       />
+      <BookingForm/>
     </div>
   );
 };
