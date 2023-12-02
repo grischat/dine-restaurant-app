@@ -1,9 +1,11 @@
 import "../Buttons/Btn.scss";
 
-const Btn = ({ children, className = "btn__book" }) => {
+const Btn = ({ children, className = "btn__book", type }) => {
   return (
     <div className="btn__container">
-      <button className={className}>{children}</button>
+      <button type={type} className={className}>
+        {children}
+      </button>
     </div>
   );
 };

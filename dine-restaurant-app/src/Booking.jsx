@@ -1,5 +1,6 @@
 import ReservationCard from "../Components/Reservation/ReservationCard";
 import BookingForm from "../Components/BookingForm/BookingForm";
+
 import './Booking.scss'
 const Booking = () => {
   return (
