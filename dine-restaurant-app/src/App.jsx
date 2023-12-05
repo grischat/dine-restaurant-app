@@ -33,7 +33,7 @@ function App() {
             btnText={"BOOK A TABLE"}
             img={"../images/homepage/ready-bg-mobile.jpg"}
           />
-          <Footer />
+          <Footer place='Homepage'/>
         </div>
       </div>
     </>

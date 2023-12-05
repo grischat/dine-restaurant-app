@@ -1,8 +1,8 @@
 import "./Footer.scss";
 
-const Footer = () => {
+const Footer = ({ place }) => {
   return (
-    <div className="footer__container">
+    <div className={`footer__container${place}`}>
       <div className="footer__content">
         <h1 className="footer__header">dine</h1>
         <p className="footer__address">

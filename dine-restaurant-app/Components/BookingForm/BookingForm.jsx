@@ -1,9 +1,11 @@
 import Btn from "../Buttons/Btn";
 import { useFormik } from "formik";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Counter from "./Counter/Counter";
 import "./BookingForm.scss";
 const BookingForm = () => {
+  const [peopleCount, setPeopleCount] = useState(4);
+
   const validateForm = (values) => {
     const errors = {};
 
@@ -16,6 +18,7 @@ const BookingForm = () => {
     if (!values.email) {
       errors.email = "Email is required";
     }
+    // Validate dates
     if (
       !values.day ||
       values.day < 1 ||
@@ -53,12 +56,9 @@ const BookingForm = () => {
       month: "",
       year: "",
       date: "",
+      people: "",
     },
     onSubmit: (values, { setSubmitting }) => {
-      const time = `${values.hour}:${values.minute} ${values.ampm}`;
-      const date = `${values.day}/${values.month}/${values.year}`;
-      formik.setFieldValue("time", time);
-      formik.setFieldValue("date", date);
       const errors = validateForm(values);
       if (Object.keys(errors).length === 0) {
         alert(JSON.stringify(values, null, 2));
@@ -67,6 +67,10 @@ const BookingForm = () => {
     },
     validate: validateForm,
   });
+  const handleCountChange = (newCount) => {
+    setPeopleCount(newCount);
+    formik.setFieldValue("people", newCount);
+  };
   //Use useEffect to handle form submission after values are updated
   useEffect(() => {
     const time = `${formik.values.hour}:${formik.values.minute} ${formik.values.ampm}`;
@@ -194,8 +198,14 @@ const BookingForm = () => {
             <option value="PM">PM</option>
           </select>
         </div>
-        <Counter/>
-        <Btn type="submit">Make a reservation</Btn>
+        <Counter
+          onChange={handleCountChange}
+          onBlur={formik.handleBlur}
+          value={peopleCount}
+        />
+        <Btn className="btn__submit" type="submit">
+          MAKE A RESERVATION
+        </Btn>
       </form>
     </div>
   );
