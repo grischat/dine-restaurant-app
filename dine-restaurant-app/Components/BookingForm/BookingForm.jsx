@@ -1,141 +1,202 @@
-import "./BookingForm.scss";
-import Counter from "./Counter/Counter";
-import { FormHelperText, TextField } from "@mui/material";
-import { useState } from "react";
 import Btn from "../Buttons/Btn";
+import { useFormik } from "formik";
+import { useEffect } from "react";
+import "./BookingForm.scss";
 const BookingForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    day: "",
-    month: "",
-    year: "",
-    time: "",
-    hour: "",
-    minute: "",
-    people: "",
+  const validateForm = (values) => {
+    const errors = {};
+
+    // Validate name
+    if (!values.name) {
+      errors.name = "Name is required";
+    }
+
+    // Validate email
+    if (!values.email) {
+      errors.email = "Email is required";
+    }
+    if (
+      !values.day ||
+      values.day < 1 ||
+      values.day > 31 ||
+      values.month < 1 ||
+      values.month > 12
+    ) {
+      errors.day = "Only 1 - 31";
+      errors.month = "Only 1 - 12";
+    }
+    if (!values.year || values.year < 2023) {
+      errors.year = "Only 2023+ year";
+    }
+    // Validate hour
+    if (!values.hour || values.hour < 1 || values.hour > 12) {
+      errors.hour = "Only 1 - 12";
+    }
+
+    // Validate minute
+    if (!values.minute || values.minute < 0 || values.minute > 59) {
+      errors.minute = "Only 0 - 59";
+    }
+
+    return errors;
+  };
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      hour: "",
+      minute: "",
+      ampm: "AM",
+      time: "",
+      day: "",
+      month: "",
+      year: "",
+      date: "",
+    },
+    onSubmit: (values, { setSubmitting }) => {
+      const time = `${values.hour}:${values.minute} ${values.ampm}`;
+      const date = `${values.day}/${values.month}/${values.year}`;
+      formik.setFieldValue("time", time);
+      formik.setFieldValue("date", date);
+      const errors = validateForm(values);
+      if (Object.keys(errors).length === 0) {
+        alert(JSON.stringify(values, null, 2));
+      }
+      setSubmitting(false);
+    },
+    validate: validateForm,
   });
-  const handleCountChange = (fieldName, value) => {
-    setFormData((prevFormData) => ({ ...prevFormData, [fieldName]: value }));
-  };
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData)
-    
-  };
-  
+  //Use useEffect to handle form submission after values are updated
+  useEffect(() => {
+    const time = `${formik.values.hour}:${formik.values.minute} ${formik.values.ampm}`;
+    const date = `${formik.values.day}/${formik.values.month}/${formik.values.year}`;
+    formik.setFieldValue("time", time);
+    formik.setFieldValue("date", date);
+  }, [
+    formik.values.hour,
+    formik.values.minute,
+    formik.values.ampm,
+    formik.values.day,
+    formik.values.month,
+    formik.values.year,
+  ]);
   return (
     <div className="form__container">
-      <form onSubmit={handleSubmit}>
-        <FormHelperText id="form__text">
-          <TextField
-            id="text__name"
-            name="name"
-            value={formData.name}
-            label="Name"
-            variant="standard"
-            onChange={handleInputChange}
-          />
-          <TextField
-            id="text__email"
-            name="email"
-            value={formData.email}
-            label="Email"
-            variant="standard"
-            onChange={handleInputChange}
-          />
-        </FormHelperText>
-        <p className="pickDate">Pick a date</p>
-        <FormHelperText className="form__date">
-          <TextField
-            className="date"
-            id="day"
-            name="day"
-            value={formData.day}
-            label="DD"
-            variant="standard"
-            inputProps={{ maxLength: 2 }}
-            onChange={handleInputChange}
-          />
-          <TextField
+      <form id="form" onSubmit={formik.handleSubmit}>
+        <input
+          id="name"
+          name="name"
+          placeholder="Name"
+          type="text"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.name}
+        />
+        {formik.touched.name && formik.errors.name && (
+          <div className="error-name">{formik.errors.name}</div>
+        )}
+
+        <input
+          id="email"
+          name="email"
+          placeholder="Email"
+          type="email"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.email}
+        />
+        {formik.touched.email && formik.errors.email && (
+          <div className="error-email">{formik.errors.email}</div>
+        )}
+        <label id="date__label" htmlFor="date">
+          Pick a date
+        </label>
+        <div className="date__container">
+          <input
             className="date"
             id="month"
             name="month"
-            value={formData.month}
-            label="MM"
-            variant="standard"
-            inputProps={{ maxLength: 2 }}
-            onChange={handleInputChange}
-          />
-          <TextField
+            placeholder="DD"
+            type="number"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.month}
+          ></input>
+          {formik.touched.month && formik.errors.month && (
+            <div className="error-month">{formik.errors.month}</div>
+          )}
+          <input
+            className="date"
+            id="day"
+            name="day"
+            placeholder="MM"
+            type="number"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.day}
+          ></input>
+          {formik.touched.day && formik.errors.day && (
+            <div className="error-day">{formik.errors.day}</div>
+          )}
+          <input
             className="date"
             id="year"
             name="year"
-            value={formData.year}
-            label="YYYY"
-            variant="standard"
-            inputProps={{ maxLength: 4 }}
-            onChange={handleInputChange}
-          />
-        </FormHelperText>
-        <p className="pickTime">Pick a time</p>
-        <FormHelperText className="form__time">
-          <TextField
-            className="time"
+            placeholder="YYYY"
+            type="number"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.year}
+          ></input>
+          {formik.touched.year && formik.errors.year && (
+            <div className="error-year">{formik.errors.year}</div>
+          )}
+        </div>
+        <label id="time__label" htmlFor="hour">
+          Pick a time
+        </label>
+        <div className="time__container">
+          <input
             id="hour"
             name="hour"
-            value={formData.hour}
-            variant="standard"
-            inputProps={{ maxLength: 2 }}
-            onChange={handleInputChange}
+            placeholder="09"
+            type="number"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.hour}
           />
-          <TextField
-            className="time"
+          {formik.touched.hour && formik.errors.hour && (
+            <div className="error-hour">{formik.errors.hour}</div>
+          )}
+
+          <input
             id="minute"
             name="minute"
-            value={formData.minute}
-            variant="standard"
-            inputProps={{ maxLength: 2 }}
-            onChange={handleInputChange}
+            placeholder="45"
+            type="number"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.minute}
           />
-          <TextField
-            className="time__AmPm"
+          {formik.touched.minute && formik.errors.minute && (
+            <div className="error-minute">{formik.errors.minute}</div>
+          )}
+
+          <select
             id="ampm"
-            name="time"
-            value={formData.time}
-            defaultValue="AM"
-            variant="standard"
-            select
-            onChange={handleInputChange}
-            SelectProps={{
-              native: true,
-            }}
+            name="ampm"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.ampm}
           >
-            <option className="time__options" value="AM">
-              AM
-            </option>
-            <option className="time__options" value="PM">
-              PM
-            </option>
-          </TextField>
-        </FormHelperText>
-        <Counter
-          name="people"
-          value={formData.people}
-          onChange={handleCountChange}
-        />
-        <Btn className="btn__book">
-          MAKE RESERVATION
-        </Btn>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+        <Btn type="submit">Make a reservation</Btn>
       </form>
     </div>
   );
 };
 
 export default BookingForm;
-//error + helperText="Error"
-//
