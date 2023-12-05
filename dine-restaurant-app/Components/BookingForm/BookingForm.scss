@@ -157,26 +157,7 @@
     top: 4rem;
     left: 2.5rem;
   }
-  .error-hour {
-    color: #b54949;
-    font-family: $leagueSpartanFont;
-    font-size: 0.625rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: -0.00781rem;
-    position: absolute;
-  }
-  .error-minute {
-    color: #b54949;
-    font-family: $leagueSpartanFont;
-    font-size: 0.625rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: -0.00781rem;
-    position: absolute;
-  }
+  
   .error-month {
     color: #b54949;
     font-family: $leagueSpartanFont;
@@ -212,5 +193,28 @@
     position: absolute;
     top: 15.2rem;
     left: 13.5rem;
+  }
+  .error-hour {
+    color: #b54949;
+    font-family: $leagueSpartanFont;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.00781rem;
+    position: absolute;
+    top: 22.2rem;
+  }
+  .error-minute {
+    color: #b54949;
+    font-family: $leagueSpartanFont;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.00781rem;
+    position: absolute;
+    top: 22.2rem;
+    left: 8.5rem;
   }
 }

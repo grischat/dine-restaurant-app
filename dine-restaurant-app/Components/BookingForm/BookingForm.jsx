@@ -1,6 +1,7 @@
 import Btn from "../Buttons/Btn";
 import { useFormik } from "formik";
 import { useEffect } from "react";
+import Counter from "./Counter/Counter";
 import "./BookingForm.scss";
 const BookingForm = () => {
   const validateForm = (values) => {
@@ -193,6 +194,7 @@ const BookingForm = () => {
             <option value="PM">PM</option>
           </select>
         </div>
+        <Counter/>
         <Btn type="submit">Make a reservation</Btn>
       </form>
     </div>
