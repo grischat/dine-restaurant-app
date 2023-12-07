@@ -5,6 +5,9 @@
   top: 4rem;
   width: 23.4375rem;
   height: 110rem;
+  @media(min-width: 768px) {
+    width: 48rem;
+  }
   .highlights__header {
     text-align: center;
     position: relative;
