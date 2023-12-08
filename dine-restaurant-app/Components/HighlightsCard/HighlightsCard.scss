@@ -5,8 +5,9 @@
   top: 4rem;
   width: 23.4375rem;
   height: 110rem;
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     width: 48rem;
+    height: 65.6875rem;
   }
   .highlights__header {
     text-align: center;
@@ -16,11 +17,17 @@
     letter-spacing: -0.025rem;
     top: 7.5rem;
     color: #fff;
+    @media (min-width: 768px) {
+      width: 27.8125rem;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 3rem;
+      letter-spacing: -0.03125rem;
+    }
   }
   .highlights__paragraph {
     color: #fff;
     text-align: center;
-    font-family: League Spartan;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -28,6 +35,11 @@
     position: relative;
     width: 21rem;
     top: 10rem;
+    @media (min-width: 768px) {
+      width: 27.8125rem;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
   }
   .highlightsmenu__container {
     display: flex;
@@ -35,5 +47,8 @@
     position: relative;
     top: 13rem;
     gap: 5rem;
+    @media (min-width: 768px) {
+      gap: 0;
+    }
   }
 }

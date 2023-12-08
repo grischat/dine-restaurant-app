@@ -26,12 +26,25 @@ function App() {
         featureLocallyDesktop: "../images/homepage/locally-sourced-desktop.jpg",
       },
     },
+    highlightImg: {
+      highlightsDishOneMobile: "../images/homepage/salmon-mobile.jpg",
+      highlightsDishOneTablet: "../images/homepage/salmon-desktop-tablet.jpg",
+      highlightsDishOneDesktop: "../images/homepage/salmon-desktop-tablet.jpg",
+      highlightsDishTwoMobile: "../images/homepage/beef-mobile.jpg",
+      highlightsDishTwoTablet: "../images/homepage/beef-desktop-tablet.jpg",
+      highlightsDishTwoDesktop: "../images/homepage/beef-desktop-tablet.jpg",
+      highlightsDishThreeMobile: "../images/homepage/chocolate-mobile.jpg",
+      highlightsDishThreeTablet: "../images/homepage/chocolate-desktop-tablet.jpg",
+      highlightsDishThreeDesktop: "../images/homepage/chocolate-desktop-tablet.jpg",
+    },
   };
-  
-  const images = useWindowResize(
-    initialImages.backgroundImg,
-    initialImages.featureImg,
-  );
+
+  const images = useWindowResize({
+    initialFeatureImages: initialImages.featureImg,
+    initialBgImages: initialImages.backgroundImg,
+    initialHighlightsImages: initialImages.highlightImg
+    
+  });
 
   return (
     <>
@@ -53,7 +66,7 @@ function App() {
             paragraph={`All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food.`}
             src={images.featureImg.settledLocallyImg}
           />
-          <HighlightsCard />
+          <HighlightsCard highlights={images.highlightImg} />
           <DineEvents />
           <ReservationCard
             header={"Ready to make a reservation?"}
