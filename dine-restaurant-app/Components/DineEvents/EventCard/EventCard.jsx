@@ -11,10 +11,10 @@ const EventCard = () => {
   const selectedEvent = eventsData.find(
     (event) => event.id === selectedEventId
   );
-
+    console.log(selectedEvent)
   return (
     <div className="events__list">
-      <img src={selectedEvent.img} alt="" />
+      <img src={selectedEvent.img} alt="event image" />
       {eventsData.map((event) => (
         <span
           key={event.id}
