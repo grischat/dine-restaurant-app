@@ -4,6 +4,7 @@ const useWindowResize = ({
   initialBgImages,
   initialFeatureImages,
   initialHighlightsImages,
+  initialBgFooterImages,
 }) => {
   const [images, setImages] = useState({
     backgroundImg: {
@@ -20,6 +21,10 @@ const useWindowResize = ({
       settledHighlightsTwo: "",
       settledHighlightsThree: "",
       ...initialHighlightsImages,
+    },
+    footerBgImg: {
+      settledFooterBgImg: "",
+      ...initialBgFooterImages,
     },
   });
 
@@ -43,6 +48,9 @@ const useWindowResize = ({
               settledHighlightsThree:
                 initialHighlightsImages.highlightsDishThreeMobile,
             },
+            footerBgImg: {
+              settledFooterBgImg: initialBgFooterImages.footerBgMobile,
+            },
           };
         } else if (window.innerWidth < 1440) {
           return {
@@ -61,6 +69,9 @@ const useWindowResize = ({
                 initialHighlightsImages.highlightsDishTwoTablet,
               settledHighlightsThree:
                 initialHighlightsImages.highlightsDishThreeTablet,
+            },
+            footerBgImg: {
+              settledFooterBgImg: initialBgFooterImages.footerBgTablet,
             },
           };
         } else {
@@ -81,6 +92,9 @@ const useWindowResize = ({
               settledHighlightsThree:
                 initialHighlightsImages.highlightsDishThreeDesktop,
             },
+            footerBgImg: {
+              settledFooterBgImg: initialBgFooterImages.footerBgDesktop,
+            },
           };
         }
       };
@@ -98,6 +112,7 @@ const useWindowResize = ({
         let newSettledHighlightsOne = "";
         let newSettledHighlightsTwo = "";
         let newSettledHighlightsThree = "";
+        let newSettledFooterBg = "";
         if (windowWidth < 768) {
           newSettledBgImg = initialBgImages.bgMobile;
           newSettledPlace = initialFeatureImages.place.featurePlaceMobile;
@@ -108,6 +123,7 @@ const useWindowResize = ({
             initialHighlightsImages.highlightsDishTwoMobile;
           newSettledHighlightsThree =
             initialHighlightsImages.highlightsDishThreeMobile;
+          newSettledFooterBg = initialBgFooterImages.footerBgMobile;
         } else if (windowWidth < 1440) {
           newSettledBgImg = initialBgImages.bgTablet;
           newSettledPlace = initialFeatureImages.place.featurePlaceTablet;
@@ -118,6 +134,7 @@ const useWindowResize = ({
             initialHighlightsImages.highlightsDishTwoTablet;
           newSettledHighlightsThree =
             initialHighlightsImages.highlightsDishThreeTablet;
+          newSettledFooterBg = initialBgFooterImages.footerBgTablet;
         } else {
           newSettledBgImg = initialBgImages.bgDesktop;
           newSettledPlace = initialFeatureImages.place.featurePlaceDesktop;
@@ -130,6 +147,7 @@ const useWindowResize = ({
             initialHighlightsImages.highlightsDishTwoDesktop;
           newSettledHighlightsThree =
             initialHighlightsImages.highlightsDishThreeDesktop;
+          newSettledFooterBg = initialBgFooterImages.footerBgDesktop;
         }
 
         return {
@@ -148,6 +166,10 @@ const useWindowResize = ({
             settledHighlightsOne: newSettledHighlightsOne,
             settledHighlightsTwo: newSettledHighlightsTwo,
             settledHighlightsThree: newSettledHighlightsThree,
+          },
+          footerBgImg: {
+            ...prevImages.backgroundImg.footerBgImg,
+            settledFooterBgImg: newSettledFooterBg,
           },
         };
       });

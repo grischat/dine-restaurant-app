@@ -5,7 +5,10 @@
   position: relative;
   display: flex;
   align-items: center;
-
+  @media(min-width: 768px) {
+    width: 48rem;
+    height: 20.5rem;
+  }
   .footer__content {
     display: flex;
     flex-direction: column;

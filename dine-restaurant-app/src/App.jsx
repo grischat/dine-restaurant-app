@@ -13,6 +13,11 @@ function App() {
       bgMobile: "../images/homepage/hero-bg-mobile.jpg",
       bgTablet: "../images/homepage/hero-bg-tablet.jpg",
       bgDesktop: "../images/homepage/hero-bg-desktop.jpg",
+      footerBgImg: {
+        footerBgMobile: "./images/homepage/ready-bg-mobile.jpg",
+        footerBgTablet: "./images/homepage/ready-bg-tablet.jpg",
+        footerBgDesktop: "./images/homepage/ready-bg-desktop.jpg",
+      },
     },
     featureImg: {
       place: {
@@ -34,16 +39,18 @@ function App() {
       highlightsDishTwoTablet: "../images/homepage/beef-desktop-tablet.jpg",
       highlightsDishTwoDesktop: "../images/homepage/beef-desktop-tablet.jpg",
       highlightsDishThreeMobile: "../images/homepage/chocolate-mobile.jpg",
-      highlightsDishThreeTablet: "../images/homepage/chocolate-desktop-tablet.jpg",
-      highlightsDishThreeDesktop: "../images/homepage/chocolate-desktop-tablet.jpg",
+      highlightsDishThreeTablet:
+        "../images/homepage/chocolate-desktop-tablet.jpg",
+      highlightsDishThreeDesktop:
+        "../images/homepage/chocolate-desktop-tablet.jpg",
     },
   };
 
   const images = useWindowResize({
     initialFeatureImages: initialImages.featureImg,
     initialBgImages: initialImages.backgroundImg,
-    initialHighlightsImages: initialImages.highlightImg
-    
+    initialHighlightsImages: initialImages.highlightImg,
+    initialBgFooterImages: initialImages.backgroundImg.footerBgImg
   });
 
   return (
@@ -71,7 +78,7 @@ function App() {
           <ReservationCard
             header={"Ready to make a reservation?"}
             btnText={"BOOK A TABLE"}
-            img="../images/homepage/ready-bg-mobile.jpg"
+            img={images.footerBgImg.settledFooterBgImg}
           />
           <Footer place="Homepage" />
         </div>

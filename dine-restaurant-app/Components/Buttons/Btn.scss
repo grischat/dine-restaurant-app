@@ -14,6 +14,10 @@
     cursor: pointer;
     background-color: black;
     transition: background-color 0.5s ease;
+    @media (min-width: 768px) {
+      width: 15.3125rem;
+      height: 4rem;
+    }
   }
   .btn__book:hover {
     background-color: #ffffff;

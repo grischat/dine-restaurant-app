@@ -1,7 +1,24 @@
-.events__list {
+.events__container {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  .events__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+    @media (min-width: 768px) {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      right: 0.4rem;
+      gap: 3rem;
+    }
+  }
+  .event__image {
+    box-shadow: 0px 68px 63px -76px rgb(66, 68, 90);
+  }
   .event__name {
     opacity: 0.5;
     transition: opacity 0.3s ease;
@@ -29,19 +46,29 @@
     font-weight: 600;
     line-height: 1.75rem;
     letter-spacing: 0.15625rem;
+    position: relative;
+
     &::before {
       content: "";
       display: block;
-      position: absolute;
-      margin-top: 2rem;
-      left: 50%;
       width: 3rem;
-      border: 2px solid #9e7f66;
+      border-bottom: 2px solid #9e7f66;
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
       transform: translateX(-50%);
+    }
+  }
+  .events__header {
+    @media (min-width: 768px) {
+      width: 28.5625rem;
+      text-align: center;
+      margin-top: 1rem;
     }
   }
   .events__description {
     width: 20.4375rem;
+    height: 7.6rem;
     color: #242b37;
     text-align: center;
     font-family: League Spartan;
@@ -49,5 +76,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1.625rem;
+    @media (min-width: 768px) {
+      width: 28.5625rem;
+      text-align: center;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
   }
 }

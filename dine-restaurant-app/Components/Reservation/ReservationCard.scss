@@ -5,6 +5,13 @@
   .reservation__img {
     position: absolute;
     z-index: -1;
+    @media(min-width: 768px) {
+      left: 0;
+    }
+    @media(min-width: 1440px) {
+      
+      bottom: 20rem;
+    }
   }
   .reservation__header {
     color: #fff;
