@@ -12,9 +12,23 @@
     width: 48rem;
     top: 27.5rem;
   }
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 35rem;
+    height: 51.25rem;
+    top: 0;
+    left: 0;
+  }
   .header {
     color: $textColorWhite;
     text-align: center;
+    @media (min-width: 1440px) {
+      position: relative;
+      bottom: 10rem;
+      right: 4rem;
+    }
   }
   .header__subheader {
     color: $textColorWhite;
@@ -28,6 +42,15 @@
       line-height: 4rem;
       letter-spacing: -0.0375rem;
     }
+    @media (min-width: 1440px) {
+      position: relative;
+      bottom: 4rem;
+      left: 8rem;
+      text-align: start;
+      line-height: 5rem;
+      letter-spacing: -0.0625rem;
+      font-size: 5rem;
+    }
   }
   .header__paragraph {
     color: $textColorWhite;
@@ -40,6 +63,13 @@
       width: 35.8125rem;
       font-size: 1.25rem;
       line-height: 1.875rem;
+    }
+    @media (min-width: 1440px) {
+      bottom: 3rem;
+      position: relative;
+      left: 7rem;
+      text-align: start;
+      width: 27.8125rem;
     }
   }
 }

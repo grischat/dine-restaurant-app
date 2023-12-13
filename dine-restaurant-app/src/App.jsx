@@ -6,16 +6,14 @@ import HighlightsCard from "../Components/HighlightsCard/HighlightsCard";
 import DineEvents from "../Components/DineEvents/DineEvents";
 import ReservationCard from "../Components/Reservation/ReservationCard";
 import Footer from "../Components/Footer/Footer";
-import initialImages from '../Components/Data/initialImages.json'
+import initialImages from "../Components/Data/initialImages.json";
 function App() {
-  
-
   const images = useWindowResize({
     initialFeatureImages: initialImages.featureImg,
     initialBgImages: initialImages.backgroundImg,
     initialHighlightsImages: initialImages.highlightImg,
     initialBgFooterImages: initialImages.backgroundImg.footerBgImg,
-    initialBookingBgImages: initialImages.backgroundImg.bookingBgImg
+    initialBookingBgImages: initialImages.backgroundImg.bookingBgImg,
   });
 
   return (
@@ -29,13 +27,17 @@ function App() {
         <HeaderBooking />
         <div className="cards__container">
           <FeatureCard
-            header={`Enjoyable place for all the family`}
-            paragraph={`Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange a tour of the farm before your meal.`}
+            imgPosition="feature__img-left"
+            containerPosition="feature__description-right"
+            header="Enjoyable place for all the family"
+            paragraph="Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange a tour of the farm before your meal."
             src={images.featureImg.settledPlaceImg}
           />
           <FeatureCard
-            header={`The most locally sourced food`}
-            paragraph={`All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food.`}
+            imgPosition="feature__img-right"
+            containerPosition="feature__description-left"
+            header="The most locally sourced food"
+            paragraph="All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food."
             src={images.featureImg.settledLocallyImg}
           />
           <HighlightsCard highlights={images.highlightImg} />

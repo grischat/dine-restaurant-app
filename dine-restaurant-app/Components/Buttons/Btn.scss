@@ -18,6 +18,11 @@
       width: 15.3125rem;
       height: 4rem;
     }
+    @media (min-width: 1440px) {
+      position: relative;
+      bottom: 1rem;
+      left: 0.7rem;
+    }
   }
   .btn__book:hover {
     background-color: #ffffff;

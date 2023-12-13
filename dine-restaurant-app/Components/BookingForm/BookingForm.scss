@@ -78,7 +78,7 @@
       display: flex;
       width: 16.4375rem;
       flex-direction: row;
-      gap: 0.5rem;
+      gap: 1rem;
       @media (min-width: 768px) {
         position: relative;
         left: 5.5rem;
@@ -203,6 +203,9 @@
     position: absolute;
     top: 8rem;
     left: 2.5rem;
+    @media(min-width: 768px) {
+      left: 4rem;
+    }
   }
   .error-name {
     color: #b54949;
@@ -215,6 +218,9 @@
     position: absolute;
     top: 4rem;
     left: 2.5rem;
+    @media(min-width: 768px) {
+      left: 4rem;
+    }
   }
 
   .error-month {
@@ -228,6 +234,10 @@
     position: absolute;
     top: 15.2rem;
     left: 1.5rem;
+    @media(min-width: 768px) {
+      top: 3rem;
+      left: 6.5rem;
+    }
   }
   .error-day {
     color: #b54949;
@@ -240,6 +250,10 @@
     position: absolute;
     top: 15.2rem;
     left: 7.5rem;
+    @media(min-width: 768px) {
+      top: 3rem;
+      left: 1rem;
+    }
   }
   .error-year {
     color: #b54949;
@@ -252,6 +266,10 @@
     position: absolute;
     top: 15.2rem;
     left: 13.5rem;
+    @media(min-width: 768px) {
+      top: 3rem;
+      left: 12.5rem;
+    }
   }
   .error-hour {
     color: #b54949;
@@ -263,6 +281,10 @@
     letter-spacing: -0.00781rem;
     position: absolute;
     top: 22.2rem;
+    @media(min-width: 768px) {
+      top: 3rem;
+      left: 1rem;
+    }
   }
   .error-minute {
     color: #b54949;
@@ -275,5 +297,9 @@
     position: absolute;
     top: 22.2rem;
     left: 8.5rem;
+    @media(min-width: 768px) {
+      top: 3rem;
+      left: 6rem;
+    }
   }
 }

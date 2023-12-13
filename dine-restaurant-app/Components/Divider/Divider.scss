@@ -4,6 +4,9 @@
   position: relative;
   top: 1rem;
   left: 0.5rem;
+  @media (min-width: 1440px) {
+    left: -8.5rem;
+  }
   &::before {
     content: "";
     display: block;
@@ -15,6 +18,7 @@
     transform: translateY(-50%);
     left: -1.2rem;
   }
+  
 }
 .highlights__divider {
   width: 4.4375rem;
@@ -32,5 +36,9 @@
     position: absolute;
     transform: translateY(-50%);
     left: -1.2rem;
+  }
+  @media(min-width: 1440px) {
+    position: relative;
+    left: -10rem;
   }
 }
