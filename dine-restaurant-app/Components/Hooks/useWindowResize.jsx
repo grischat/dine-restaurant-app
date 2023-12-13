@@ -5,6 +5,7 @@ const useWindowResize = ({
   initialFeatureImages,
   initialHighlightsImages,
   initialBgFooterImages,
+  initialBookingBgImages
 }) => {
   const [images, setImages] = useState({
     backgroundImg: {
@@ -26,6 +27,10 @@ const useWindowResize = ({
       settledFooterBgImg: "",
       ...initialBgFooterImages,
     },
+    bookingBgImg: {
+      settledBookingBgImg: '',
+      ...initialBookingBgImages
+    }
   });
 
   useEffect(() => {
@@ -51,6 +56,9 @@ const useWindowResize = ({
             footerBgImg: {
               settledFooterBgImg: initialBgFooterImages.footerBgMobile,
             },
+            bookingBgImg: {
+              settledBookingBgImg: initialBookingBgImages.bookingBgImgMobile,
+            }
           };
         } else if (window.innerWidth < 1440) {
           return {
@@ -73,6 +81,9 @@ const useWindowResize = ({
             footerBgImg: {
               settledFooterBgImg: initialBgFooterImages.footerBgTablet,
             },
+            bookingBgImg: {
+              settledBookingBgImg: initialBookingBgImages.bookingBgImgTablet
+            }
           };
         } else {
           return {
@@ -95,6 +106,9 @@ const useWindowResize = ({
             footerBgImg: {
               settledFooterBgImg: initialBgFooterImages.footerBgDesktop,
             },
+            bookingBgImg: {
+              settledBookingBgImg: initialBookingBgImages.bookingBgImgDesktop
+            }
           };
         }
       };
@@ -113,6 +127,7 @@ const useWindowResize = ({
         let newSettledHighlightsTwo = "";
         let newSettledHighlightsThree = "";
         let newSettledFooterBg = "";
+        let newSettledBookingBg = "";
         if (windowWidth < 768) {
           newSettledBgImg = initialBgImages.bgMobile;
           newSettledPlace = initialFeatureImages.place.featurePlaceMobile;
@@ -124,6 +139,7 @@ const useWindowResize = ({
           newSettledHighlightsThree =
             initialHighlightsImages.highlightsDishThreeMobile;
           newSettledFooterBg = initialBgFooterImages.footerBgMobile;
+          newSettledBookingBg = initialBookingBgImages.bookingBgImgMobile
         } else if (windowWidth < 1440) {
           newSettledBgImg = initialBgImages.bgTablet;
           newSettledPlace = initialFeatureImages.place.featurePlaceTablet;
@@ -135,12 +151,12 @@ const useWindowResize = ({
           newSettledHighlightsThree =
             initialHighlightsImages.highlightsDishThreeTablet;
           newSettledFooterBg = initialBgFooterImages.footerBgTablet;
+          newSettledBookingBg = initialBookingBgImages.bookingBgImgTablet
         } else {
           newSettledBgImg = initialBgImages.bgDesktop;
           newSettledPlace = initialFeatureImages.place.featurePlaceDesktop;
           newSettledLocally =
             initialFeatureImages.locally.featureLocallyDesktop;
-
           newSettledHighlightsOne =
             initialHighlightsImages.highlightsDishOneDesktop;
           newSettledHighlightsTwo =
@@ -148,6 +164,7 @@ const useWindowResize = ({
           newSettledHighlightsThree =
             initialHighlightsImages.highlightsDishThreeDesktop;
           newSettledFooterBg = initialBgFooterImages.footerBgDesktop;
+          newSettledBookingBg = initialBookingBgImages.bookingBgImgDesktop
         }
 
         return {
@@ -171,6 +188,11 @@ const useWindowResize = ({
             ...prevImages.backgroundImg.footerBgImg,
             settledFooterBgImg: newSettledFooterBg,
           },
+          bookingBgImg: {
+            ...prevImages.backgroundImg.bookingBgImg,
+            settledBookingBgImg: newSettledBookingBg,
+            
+          }
         };
       });
     };

@@ -6,51 +6,16 @@ import HighlightsCard from "../Components/HighlightsCard/HighlightsCard";
 import DineEvents from "../Components/DineEvents/DineEvents";
 import ReservationCard from "../Components/Reservation/ReservationCard";
 import Footer from "../Components/Footer/Footer";
-
+import initialImages from '../Components/Data/initialImages.json'
 function App() {
-  const initialImages = {
-    backgroundImg: {
-      bgMobile: "../images/homepage/hero-bg-mobile.jpg",
-      bgTablet: "../images/homepage/hero-bg-tablet.jpg",
-      bgDesktop: "../images/homepage/hero-bg-desktop.jpg",
-      footerBgImg: {
-        footerBgMobile: "./images/homepage/ready-bg-mobile.jpg",
-        footerBgTablet: "./images/homepage/ready-bg-tablet.jpg",
-        footerBgDesktop: "./images/homepage/ready-bg-desktop.jpg",
-      },
-    },
-    featureImg: {
-      place: {
-        featurePlaceMobile: "../images/homepage/enjoyable-place-mobile.jpg",
-        featurePlaceTablet: "../images/homepage/enjoyable-place-tablet.jpg",
-        featurePlaceDesktop: "../images/homepage/enjoyable-place-desktop.jpg",
-      },
-      locally: {
-        featureLocallyMobile: "../images/homepage/locally-sourced-mobile.jpg",
-        featureLocallyTablet: "../images/homepage/locally-sourced-tablet.jpg",
-        featureLocallyDesktop: "../images/homepage/locally-sourced-desktop.jpg",
-      },
-    },
-    highlightImg: {
-      highlightsDishOneMobile: "../images/homepage/salmon-mobile.jpg",
-      highlightsDishOneTablet: "../images/homepage/salmon-desktop-tablet.jpg",
-      highlightsDishOneDesktop: "../images/homepage/salmon-desktop-tablet.jpg",
-      highlightsDishTwoMobile: "../images/homepage/beef-mobile.jpg",
-      highlightsDishTwoTablet: "../images/homepage/beef-desktop-tablet.jpg",
-      highlightsDishTwoDesktop: "../images/homepage/beef-desktop-tablet.jpg",
-      highlightsDishThreeMobile: "../images/homepage/chocolate-mobile.jpg",
-      highlightsDishThreeTablet:
-        "../images/homepage/chocolate-desktop-tablet.jpg",
-      highlightsDishThreeDesktop:
-        "../images/homepage/chocolate-desktop-tablet.jpg",
-    },
-  };
+  
 
   const images = useWindowResize({
     initialFeatureImages: initialImages.featureImg,
     initialBgImages: initialImages.backgroundImg,
     initialHighlightsImages: initialImages.highlightImg,
-    initialBgFooterImages: initialImages.backgroundImg.footerBgImg
+    initialBgFooterImages: initialImages.backgroundImg.footerBgImg,
+    initialBookingBgImages: initialImages.backgroundImg.bookingBgImg
   });
 
   return (
@@ -76,7 +41,11 @@ function App() {
           <HighlightsCard highlights={images.highlightImg} />
           <DineEvents />
           <ReservationCard
+            className="reservation__img"
+            classNameParagraph="reservation__header"
+            classNameInnerContent="innerContent"
             header={"Ready to make a reservation?"}
+            btnPresented={true}
             btnText={"BOOK A TABLE"}
             img={images.footerBgImg.settledFooterBgImg}
           />

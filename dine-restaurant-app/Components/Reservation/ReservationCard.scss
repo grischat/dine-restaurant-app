@@ -1,16 +1,25 @@
 .reservation__container {
   display: flex;
   flex-direction: column;
-  
+
   .reservation__img {
     position: absolute;
     z-index: -1;
-    @media(min-width: 768px) {
+    @media (min-width: 768px) {
       left: 0;
     }
-    @media(min-width: 1440px) {
-      
+    @media (min-width: 1440px) {
       bottom: 20rem;
+    }
+  }
+  .reservation__imgBooking {
+    position: absolute;
+    z-index: -1;
+
+    @media (min-width: 768px) {
+      margin-left: -12rem;
+    }
+    @media (min-width: 1440px) {
     }
   }
   .reservation__header {
@@ -21,7 +30,23 @@
     font-weight: 700;
     line-height: 2.5rem;
     letter-spacing: -0.025rem;
+    
   }
+  .reservation__headerBg {
+    color: #fff;
+    text-align: center;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: -0.025rem;
+    @media (min-width: 768px) {
+      position: relative;
+      right: 15rem;
+      font-size: 3rem;
+    }
+  }
+
   .reservation__paragraph {
     color: #fff;
     width: 20.4375rem;
@@ -30,6 +55,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1.625rem;
+    @media (min-width: 768px) {
+      width: 35.8125rem;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.875rem;
+    }
     .reservation__subheader {
       color: #fff;
       text-align: center;
@@ -41,12 +73,21 @@
       letter-spacing: -0.025rem;
     }
   }
+  .innerContentBooking {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2rem;
+    top: 3rem;
+    @media (min-width: 768px) {
+      right: 6rem;
+    }
+  }
   .innerContent {
     display: flex;
     flex-direction: column;
     position: relative;
     gap: 2rem;
     top: 3rem;
-    
   }
 }

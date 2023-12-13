@@ -1,5 +1,5 @@
 import "./EventCard.scss";
-import eventsData from "./Events.json";
+import eventsData from '../../Data/events.json';
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Btn from "../../Buttons/Btn";
@@ -11,7 +11,7 @@ const EventCard = () => {
   const selectedEvent = eventsData.find(
     (event) => event.id === selectedEventId
   );
-  console.log(selectedEvent);
+
   return (
     <div className="events__container">
       <img
