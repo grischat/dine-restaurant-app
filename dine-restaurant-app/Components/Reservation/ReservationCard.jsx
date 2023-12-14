@@ -10,11 +10,12 @@ const ReservationCard = ({
   btnPresented = false,
   className,
   classNameParagraph,
-  classNameInnerContent
+  classNameInnerContent,
 }) => {
   return (
     <div className="reservation__container">
       <img className={className} src={img} alt="dish photo" />
+
       <div className={classNameInnerContent}>
         <h2 className={classNameParagraph}>{header}</h2>
         {paragraph && (
@@ -29,7 +30,7 @@ const ReservationCard = ({
             to accommodate you.
           </p>
         )}
-        {window.innerWidth < 768 || btnPresented === true ?  (
+        {window.innerWidth < 768 || btnPresented === true ? (
           <Link to="/booking">
             <Btn className="btn__book-transparent">{btnText}</Btn>
           </Link>

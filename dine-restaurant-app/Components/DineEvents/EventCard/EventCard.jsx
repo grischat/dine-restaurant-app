@@ -1,5 +1,5 @@
 import "./EventCard.scss";
-import eventsData from '../../Data/events.json';
+import eventsData from "../../Data/events.json";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Btn from "../../Buttons/Btn";
@@ -13,7 +13,7 @@ const EventCard = () => {
   );
 
   return (
-    <div className="events__container">
+    <div className="event">
       <img
         className="event__image"
         src={
@@ -27,7 +27,7 @@ const EventCard = () => {
       />
       <div className="events__list">
         {eventsData.map((event) => (
-          <span
+          <p
             key={event.id}
             className={
               selectedEventId === event.id
@@ -37,18 +37,20 @@ const EventCard = () => {
             onClick={() => handleEventClick(event.id)}
           >
             {event.header}
-          </span>
+          </p>
         ))}
       </div>
       {selectedEvent && (
-        <>
+        <div className="event__summary">
           <h2 className="events__header">{selectedEvent.header}</h2>
           <p className="events__description">{selectedEvent.description}</p>
-        </>
+          <div className="btn__container">
+            <Link to="/booking">
+              <Btn>BOOK A TABLE</Btn>
+            </Link>
+          </div>
+        </div>
       )}
-      <Link to="/booking">
-        <Btn>BOOK A TABLE</Btn>
-      </Link>
     </div>
   );
 };

@@ -5,11 +5,13 @@
   .reservation__img {
     position: absolute;
     z-index: -1;
+    
     @media (min-width: 768px) {
       left: 0;
     }
     @media (min-width: 1440px) {
-      bottom: 20rem;
+      bottom: 20.5rem;
+      
     }
   }
   .reservation__imgBooking {
@@ -89,5 +91,8 @@
     position: relative;
     gap: 2rem;
     top: 3rem;
+    @media(min-width: 1440px) {
+      top: -23rem;
+    }
   }
 }
