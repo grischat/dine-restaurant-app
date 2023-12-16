@@ -1,6 +1,7 @@
 import Btn from "../Buttons/Btn";
 import { Link } from "react-router-dom";
 import "./ReservationCard.scss";
+
 const ReservationCard = ({
   img,
   header,
@@ -11,7 +12,7 @@ const ReservationCard = ({
   classNameImage,
   classNameParagraph,
   classNameInnerContent,
-  className = '"reservation__container"'
+  className = '"reservation__container"',
 }) => {
   return (
     <div className={className}>
@@ -19,6 +20,7 @@ const ReservationCard = ({
 
       <div className={classNameInnerContent}>
         <h2 className={classNameParagraph}>{header}</h2>
+
         {paragraph && (
           <p className="reservation__paragraph">
             {subheader && (
