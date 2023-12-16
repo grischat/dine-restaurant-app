@@ -12,10 +12,12 @@ const Booking = () => {
     initialBgFooterImages: initialImages.backgroundImg.footerBgImg,
     initialBookingBgImages: initialImages.backgroundImg.bookingBgImg,
   });
+
   return (
     <div className="booking__container">
       <ReservationCard
-        className="reservation__imgBooking"
+        className="reservation__containerBooking"
+        classNameImage="reservation__imgBooking"
         classNameParagraph="reservation__headerBg"
         classNameInnerContent="innerContentBooking"
         header={`dine`}

@@ -90,7 +90,7 @@
       text-align: center;
       margin-top: 1rem;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 1440px) {
       text-align: start;
     }
   }
@@ -107,7 +107,9 @@
   }
   .btn__container {
     position: relative;
-    right: 3.6rem;
+    @media(min-width: 1440px) {
+      right: 3.6rem;
+    }
   }
   .events__description {
     width: 20.4375rem;

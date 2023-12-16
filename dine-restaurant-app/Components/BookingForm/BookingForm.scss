@@ -14,6 +14,11 @@
     height: 34.0625rem;
     right: 5rem;
   }
+  @media (min-width: 1440px) {
+    left: 13rem;
+    top: 4rem;
+  }
+
   #form {
     display: flex;
     flex-direction: column;

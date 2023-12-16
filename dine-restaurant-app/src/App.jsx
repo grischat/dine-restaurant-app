@@ -42,16 +42,19 @@ function App() {
           />
           <HighlightsCard highlights={images.highlightImg} />
           <DineEvents />
-          <ReservationCard
-            className="reservation__img"
-            classNameParagraph="reservation__header"
-            classNameInnerContent="innerContent"
-            header={"Ready to make a reservation?"}
-            btnPresented={true}
-            btnText={"BOOK A TABLE"}
-            img={images.footerBgImg.settledFooterBgImg}
-          />
-          <Footer place="Homepage" />
+          <div className="footer__container">
+            <ReservationCard
+              className="reservation__container"
+              classNameImage="reservation__img"
+              classNameParagraph="reservation__header"
+              classNameInnerContent="innerContent"
+              header={"Ready to make a reservation?"}
+              btnPresented={true}
+              btnText={"BOOK A TABLE"}
+              img={images.footerBgImg.settledFooterBgImg}
+            />
+            <Footer place="Homepage" />
+          </div>
         </div>
       </div>
     </>

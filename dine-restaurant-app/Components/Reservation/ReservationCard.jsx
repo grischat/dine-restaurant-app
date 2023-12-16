@@ -8,13 +8,14 @@ const ReservationCard = ({
   paragraph,
   btnText,
   btnPresented = false,
-  className,
+  classNameImage,
   classNameParagraph,
   classNameInnerContent,
+  className = '"reservation__container"'
 }) => {
   return (
-    <div className="reservation__container">
-      <img className={className} src={img} alt="dish photo" />
+    <div className={className}>
+      <img className={classNameImage} src={img} alt="dish photo" />
 
       <div className={classNameInnerContent}>
         <h2 className={classNameParagraph}>{header}</h2>

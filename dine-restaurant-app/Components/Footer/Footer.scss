@@ -10,9 +10,8 @@
     height: 20.5rem;
   }
   @media (min-width: 1440px) {
-    left: -3rem;
-    width: 95.5rem;
-    position: absolute;
+    width: 100vw;
+    position: relative;
     bottom: 0;
   }
   .footer__content {
@@ -64,11 +63,19 @@
     right: 12rem;
     width: 48rem;
   }
+  @media(min-width: 1440px) {
+    width: 100vw;
+    height: 17rem;
+    right: 0;
+  }
   .footer__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
+    @media(min-width: 1440px) {
+      flex-direction: row;
+    }
     .footer__header {
       width: 6.46406rem;
       height: 2.5rem;

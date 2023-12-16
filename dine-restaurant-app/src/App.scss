@@ -4,7 +4,7 @@
     width: 48rem;
   }
   @media(min-width: 1440px) {
-    width: 90rem;
+    width: 100vw;
   }
   .container__bgimg {
     position: absolute;
@@ -28,5 +28,8 @@
       gap: 0;
     }
   }
-  
+  .footer__container {
+    width: 100%;
+    
+  }
 }
