@@ -6,50 +6,78 @@ import HighlightsCard from "../Components/HighlightsCard/HighlightsCard";
 import DineEvents from "../Components/DineEvents/DineEvents";
 import ReservationCard from "../Components/Reservation/ReservationCard";
 import Footer from "../Components/Footer/Footer";
-//images direct import for gh-pages (not bundling with the src property)
-import bgMobile from "../public/images/homepage/hero-bg-mobile.jpg"
+//images direct import for gh-pages (not bundling with the src property) WHAT A FREAKED SHIT i would say
+import bgMobile from "./public/images/homepage/hero-bg-mobile.jpg";
+import bgTablet from "./public/images/homepage/hero-bg-tablet.jpg";
+import bgDesktop from "./public/images/homepage/hero-bg-desktop.jpg";
+
+import footerBgMobile from "./public/images/homepage/ready-bg-mobile.jpg";
+import footerBgTablet from "./public/images/homepage/ready-bg-tablet.jpg";
+import footerBgDesktop from "./public/images/homepage/ready-bg-desktop.jpg";
+
+import bookingBgImgMobile from "./public/images/booking/hero-bg-mobile.jpg";
+import bookingBgImgTablet from "./public/images/booking/hero-bg-tablet.jpg";
+import bookingBgImgDesktop from "./public/images/booking/hero-bg-desktop.jpg";
+
+import featurePlaceMobile from "./public/images/homepage/enjoyable-place-mobile.jpg";
+import featurePlaceTablet from "./public/images/homepage/enjoyable-place-tablet.jpg";
+import featurePlaceDesktop from "./public/images/homepage/enjoyable-place-desktop.jpg";
+
+import featureLocallyMobile from "./public/images/homepage/locally-sourced-mobile.jpg";
+import featureLocallyTablet from "./public/images/homepage/locally-sourced-tablet.jpg";
+import featureLocallyDesktop from "./public/images/homepage/locally-sourced-desktop.jpg";
+
+import highlightsDishOneMobile from "./public/images/homepage/salmon-mobile.jpg";
+import highlightsDishOneTablet from "./public/images/homepage/salmon-desktop-tablet.jpg";
+import highlightsDishOneDesktop from "./public/images/homepage/salmon-desktop-tablet.jpg";
+import highlightsDishTwoMobile from "./public/images/homepage/beef-mobile.jpg";
+import highlightsDishTwoTablet from "./public/images/homepage/beef-desktop-tablet.jpg";
+import highlightsDishTwoDesktop from "./public/images/homepage/beef-desktop-tablet.jpg";
+import highlightsDishThreeMobile from "./public/images/homepage/chocolate-mobile.jpg";
+import highlightsDishThreeTablet from "./public/images/homepage/chocolate-desktop-tablet.jpg";
+import highlightsDishThreeDesktop from "./public/images/homepage/chocolate-desktop-tablet.jpg";
 function App() {
   const initialImages = {
     backgroundImg: {
       bgMobile: bgMobile,
-      bgTablet: "../images/homepage/hero-bg-tablet.jpg",
-      bgDesktop: "../images/homepage/hero-bg-desktop.jpg",
+      bgTablet: bgTablet,
+      bgDesktop: bgDesktop,
       footerBgImg: {
-        footerBgMobile: "./images/homepage/ready-bg-mobile.jpg",
-        footerBgTablet: "./images/homepage/ready-bg-tablet.jpg",
-        footerBgDesktop: "./images/homepage/ready-bg-desktop.jpg",
+        footerBgMobile: footerBgMobile,
+        footerBgTablet: footerBgTablet,
+        footerBgDesktop: footerBgDesktop,
       },
       bookingBgImg: {
-        bookingBgImgMobile: "./images/booking/hero-bg-mobile.jpg",
-        bookingBgImgTablet: "./images/booking/hero-bg-tablet.jpg",
-        bookingBgImgDesktop: "./images/booking/hero-bg-desktop.jpg",
+        bookingBgImgMobile: bookingBgImgMobile,
+        bookingBgImgTablet: bookingBgImgTablet,
+        bookingBgImgDesktop: bookingBgImgDesktop,
       },
     },
     featureImg: {
       place: {
-        featurePlaceMobile: "../images/homepage/enjoyable-place-mobile.jpg",
-        featurePlaceTablet: "../images/homepage/enjoyable-place-tablet.jpg",
-        featurePlaceDesktop: "../images/homepage/enjoyable-place-desktop.jpg",
+        featurePlaceMobile: featurePlaceMobile,
+        featurePlaceTablet: featurePlaceTablet,
+        featurePlaceDesktop: featurePlaceDesktop,
       },
       locally: {
-        featureLocallyMobile: "../images/homepage/locally-sourced-mobile.jpg",
-        featureLocallyTablet: "../images/homepage/locally-sourced-tablet.jpg",
-        featureLocallyDesktop: "../images/homepage/locally-sourced-desktop.jpg",
+        featureLocallyMobile: featureLocallyMobile,
+        featureLocallyTablet: featureLocallyTablet,
+        featureLocallyDesktop: featureLocallyDesktop,
       },
     },
     highlightImg: {
-      highlightsDishOneMobile: "../images/homepage/salmon-mobile.jpg",
-      highlightsDishOneTablet: "../images/homepage/salmon-desktop-tablet.jpg",
-      highlightsDishOneDesktop: "../images/homepage/salmon-desktop-tablet.jpg",
-      highlightsDishTwoMobile: "../images/homepage/beef-mobile.jpg",
-      highlightsDishTwoTablet: "../images/homepage/beef-desktop-tablet.jpg",
-      highlightsDishTwoDesktop: "../images/homepage/beef-desktop-tablet.jpg",
-      highlightsDishThreeMobile: "../images/homepage/chocolate-mobile.jpg",
-      highlightsDishThreeTablet: "../images/homepage/chocolate-desktop-tablet.jpg",
-      highlightsDishThreeDesktop: "../images/homepage/chocolate-desktop-tablet.jpg",
+      highlightsDishOneMobile: highlightsDishOneMobile,
+      highlightsDishOneTablet: highlightsDishOneTablet,
+      highlightsDishOneDesktop: highlightsDishOneDesktop,
+      highlightsDishTwoMobile: highlightsDishTwoMobile,
+      highlightsDishTwoTablet: highlightsDishTwoTablet,
+      highlightsDishTwoDesktop: highlightsDishTwoDesktop,
+      highlightsDishThreeMobile: highlightsDishThreeMobile,
+      highlightsDishThreeTablet: highlightsDishThreeTablet,
+      highlightsDishThreeDesktop: highlightsDishThreeDesktop,
     },
   };
-  
+
   const images = useWindowResize({
     initialFeatureImages: initialImages.featureImg,
     initialBgImages: initialImages.backgroundImg,
@@ -57,7 +85,7 @@ function App() {
     initialBgFooterImages: initialImages.backgroundImg.footerBgImg,
     initialBookingBgImages: initialImages.backgroundImg.bookingBgImg,
   });
-  
+
   return (
     <>
       <div className="container">
