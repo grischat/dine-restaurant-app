@@ -11,7 +11,7 @@ const EventCard = () => {
   const selectedEvent = eventsData.find(
     (event) => event.id === selectedEventId
   );
-
+  
   return (
     <div className="event">
       <img
