@@ -15,7 +15,7 @@ function App() {
     initialBgFooterImages: initialImages.backgroundImg.footerBgImg,
     initialBookingBgImages: initialImages.backgroundImg.bookingBgImg,
   });
-
+  
   return (
     <>
       <div className="container">
