@@ -1,0 +1,53 @@
+.counter__container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 16.4375rem;
+  height: 2.5625rem;
+  top: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  @media(min-width: 768px) {
+    width: 27.75rem;
+  }
+  #minus,
+  #plus {
+    width: 2rem;
+    border: none;
+    background-color: transparent;
+    color: #9e7f66;
+    font-family: League Spartan;
+    font-size: 1.75rem;
+    font-weight: 900;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    top: 0.5rem;
+    user-select: none;
+  }
+  #minus-disabled,
+  #plus-disabled {
+    width: 2rem;
+    border: none;
+    background-color: transparent;
+    color: #9e7f66;
+    font-family: League Spartan;
+    font-size: 1.75rem;
+    font-weight: 900;
+    opacity: 0.5;
+    position: relative;
+    text-align: center;
+    top: 0.5rem;
+    user-select: none;
+  }
+  #people {
+    position: relative;
+    top: 0.5rem;
+    color: #151515;
+    font-family: League Spartan;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem; /* 120% */
+    letter-spacing: -0.01563rem;
+  }
+}

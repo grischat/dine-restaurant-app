@@ -1,0 +1,118 @@
+.footer__containerHomepage {
+  width: 23.4375rem;
+  height: 27.5rem;
+  background: #111;
+  position: relative;
+  display: flex;
+  align-items: center;
+  @media (min-width: 768px) {
+    width: 48rem;
+    height: 20.5rem;
+  }
+  @media (min-width: 1440px) {
+    width: 100vw;
+    position: relative;
+    bottom: 0;
+  }
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    @media (min-width: 1440px) {
+      flex-direction: row;
+      gap: 16rem;
+    }
+    .footer__header {
+      width: 6.46406rem;
+      height: 2.5rem;
+      color: #fff;
+    }
+    .footer__address {
+      color: #fff;
+      text-align: center;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 100;
+      line-height: 1.75rem;
+      letter-spacing: 0.125rem;
+      text-transform: uppercase;
+    }
+    .footer__opentimes {
+      color: #fff;
+      text-align: center;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 100;
+      line-height: 1.75rem;
+      letter-spacing: 0.125rem;
+      text-transform: uppercase;
+    }
+  }
+}
+.footer__containerBooking {
+  width: 23.4375rem;
+  height: 27.5rem;
+  background: #111;
+  position: relative;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 20rem;
+  @media (min-width: 768px) {
+    right: 12rem;
+    width: 48rem;
+  }
+  @media(min-width: 1440px) {
+    width: 100vw;
+    height: 17rem;
+    right: 0;
+  }
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    @media(min-width: 1440px) {
+      flex-direction: row;
+    }
+    .footer__header {
+      width: 6.46406rem;
+      height: 2.5rem;
+      color: #fff;
+      @media (min-width: 768px) {
+        position: absolute;
+        left: 5rem;
+        top: 7rem;
+      }
+    }
+    .footer__address {
+      color: #fff;
+      text-align: center;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 100;
+      line-height: 1.75rem;
+      letter-spacing: 0.125rem;
+      text-transform: uppercase;
+      @media (min-width: 768px) {
+        text-align: start;
+      }
+    }
+    .footer__opentimes {
+      color: #fff;
+      text-align: center;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 100;
+      line-height: 1.75rem;
+      letter-spacing: 0.125rem;
+      text-transform: uppercase;
+      @media (min-width: 768px) {
+        text-align: start;
+        position: relative;
+        left: 1.8rem;
+      }
+    }
+  }
+}

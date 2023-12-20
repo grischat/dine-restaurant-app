@@ -1,0 +1,75 @@
+@import "../dine-restaurant-app/src/index.scss";
+.header__container {
+  position: relative;
+  top: 13.5rem;
+  width: 23.4375rem;
+  height: 34.5rem;
+  background-color: $codGray;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @media (min-width: 768px) {
+    width: 48rem;
+    top: 27.5rem;
+  }
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 35rem;
+    height: 51.25rem;
+    top: 0;
+    left: 0;
+  }
+  .header {
+    color: $textColorWhite;
+    text-align: center;
+    @media (min-width: 1440px) {
+      position: relative;
+      bottom: 10rem;
+      right: 4rem;
+    }
+  }
+  .header__subheader {
+    color: $textColorWhite;
+    text-align: center;
+    font-weight: 300;
+    @media (min-width: 768px) {
+      text-align: center;
+      font-family: League Spartan;
+      font-size: 3rem;
+      font-style: normal;
+      line-height: 4rem;
+      letter-spacing: -0.0375rem;
+    }
+    @media (min-width: 1440px) {
+      position: relative;
+      bottom: 4rem;
+      left: 8rem;
+      text-align: start;
+      line-height: 5rem;
+      letter-spacing: -0.0625rem;
+      font-size: 5rem;
+    }
+  }
+  .header__paragraph {
+    color: $textColorWhite;
+    width: 15.4375rem;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.875rem;
+    font-size: 0.79rem;
+    @media (min-width: 768px) {
+      width: 35.8125rem;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+    @media (min-width: 1440px) {
+      bottom: 3rem;
+      position: relative;
+      left: 7rem;
+      text-align: start;
+      width: 27.8125rem;
+    }
+  }
+}
